@@ -16,7 +16,6 @@
       </div>
       <input type="password" [(ngModel)]="data.password" name="pwd" id="pwd" required (paste)="doNothing($event)" onpaste="event.preventDefault()"/>
     </div>
-
     <div class="form-row">
       <button (click)="reset()">Reset</button>
       <button (click)="login()" [disabled]="registerForm['form'].invalid">Login</button>
