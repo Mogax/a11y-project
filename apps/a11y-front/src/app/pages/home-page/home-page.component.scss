@@ -76,18 +76,18 @@
 
     &__header-1 {
       text-align:center;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: bold;
       background-color: #6528F7;
-      padding: 1em;
+      padding: 0.5em;
     }
 
     &__header-2 {
       text-align:center;
-      font-size: 20px;
+      font-size: 2rem;
       font-weight: bold;
       background-color: #0E0227;
-      padding: 1em;
+      padding: 0.5em;
     }
 
     &__body {
@@ -99,6 +99,7 @@
     .card__body {
       padding: 1em;
       background-color: #6528F7;
+      line-height: 2em;
     }
   }
 
@@ -106,8 +107,14 @@
     .card__body {
       padding: 1em;
       background-color: #0E0227;
+      line-height: 2em;
     }
   }
+}
+
+.section--3 {
+  position: relative;
+  margin-top: 2em;
 }
 
 .testimony {
