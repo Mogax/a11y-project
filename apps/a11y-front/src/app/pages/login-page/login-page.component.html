@@ -16,15 +16,10 @@
       </div>
       <input type="password" [(ngModel)]="data.password" name="pwd" id="pwd" required (paste)="doNothing($event)" onpaste="event.preventDefault()"/>
     </div>
-    <div class="label">
-      <input type="checkbox" id="newsletter" name="newsletter" />
-      <label for="newsletter">Newsletter</label>
-    </div>
     <div class="form-row">
       <button (click)="reset()">Reset</button>
       <button (click)="login()" [disabled]="registerForm['form'].invalid">Register</button>
     </div>
-    <p>With the newsletter wou will not miss our latest news! Give us your email address and you can be confident to get only the best content in your mailbox</p>
   </form>
 </div>
 
