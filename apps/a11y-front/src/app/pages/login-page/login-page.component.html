@@ -1,12 +1,12 @@
 <a11y-header></a11y-header>
 
-<h1>Register</h1>
+<h1>Login</h1>
 
 <div class="login-form">
   <form #registerForm="ngForm">
     <div class="form-row">
       <div class="label">
-        <label for="text">Login: </label>
+        <label for="text">Email: </label>
       </div>
       <input type="text" [(ngModel)]="data.email" name="text" id="text" required/>
     </div>
@@ -19,7 +19,7 @@
 
     <div class="form-row">
       <button (click)="reset()">Reset</button>
-      <button (click)="login()" [disabled]="registerForm['form'].invalid">Register</button>
+      <button (click)="login()" [disabled]="registerForm['form'].invalid">Login</button>
     </div>
   </form>
 </div>
