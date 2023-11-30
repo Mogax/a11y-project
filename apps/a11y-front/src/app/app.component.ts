@@ -8,7 +8,7 @@ import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.
 
 @Component({
   standalone: true,
-  imports: [RouterModule, NewsletterComponent, CookieBannerComponent],
+  imports: [RouterModule, CookieBannerComponent],
   selector: 'a11y-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

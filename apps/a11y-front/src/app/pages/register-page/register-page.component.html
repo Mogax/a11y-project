@@ -22,10 +22,15 @@
       </div>
       <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required (paste)="doNothing($event)" onpaste="event.preventDefault()"/>
     </div>
+    <div class="label">
+      <input type="checkbox" id="newsletter" name="newsletter" />
+      <label for="newsletter">Newsletter</label>
+    </div>
     <div class="form-row">
       <button (click)="reset()">{{'authPage.resetButton' | translate}}</button>
       <button (click)="register()" [disabled]="registerForm['form'].invalid">{{'authPage.registerButton' | translate}}</button>
     </div>
+    <p>With the newsletter wou will not miss our latest news! Give us your email address and you can be confident to get only the best content in your mailbox</p>
   </form>
 </div>
 
