@@ -17,8 +17,6 @@ export class AppComponent {
 
   constructor(private readonly translate: TranslateService) {
     this.manageTranslations();
-    this.getGeolocation();
-    this.setNotifications();
   }
 
   private manageTranslations() {
@@ -37,22 +35,5 @@ export class AppComponent {
         return;
       }
     }
-  }
-
-  private getGeolocation() {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        // We will send this over later
-        // doSomething(position.coords.latitude, position.coords.longitude);
-      });
-    }
-  }
-
-  private setNotifications() {
-    Notification.requestPermission().then((permission) => {
-     if (permission === "granted") {
-       // To use later
-      }
-    });
   }
 }

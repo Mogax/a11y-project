@@ -11,7 +11,23 @@ import {NewsService} from "./news.service";
   templateUrl: './news-page.component.html',
   styleUrls: ['./news-page.component.scss'],
 })
+
 export class NewsPageComponent {
+
+  constructor() {
+    this.setNotifications()
+  }
+
   private readonly newsService = inject(NewsService);
   allNews$ = this.newsService.getNews() ;
+
+  private setNotifications() {
+    Notification.requestPermission().then((permission) => {
+      if (permission === "granted") {
+        // To use later
+      }
+    });
+  }
+
 }
+
