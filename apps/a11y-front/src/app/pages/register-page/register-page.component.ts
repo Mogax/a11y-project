@@ -1,26 +1,36 @@
-import {Component, inject} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from "@angular/forms";
-import {Auth, createUserWithEmailAndPassword} from "@angular/fire/auth";
-import {catchError, from, NEVER, take} from "rxjs";
-import {HeaderComponent} from "../../components/header/header.component";
-import {FooterComponent} from "../../components/footer/footer.component";
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
+import { catchError, from, NEVER, take } from 'rxjs';
+import { HeaderComponent } from '../../components/header/header.component';
+import { FooterComponent } from '../../components/footer/footer.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 export class RegisterModel {
-  constructor(public password: string, public confirmPassword: string, public email: string) {
-  }
+  constructor(
+    public password: string,
+    public confirmPassword: string,
+    public email: string
+  ) {}
 }
 
 @Component({
   selector: 'a11y-register-page',
   standalone: true,
-  imports: [CommonModule, FormsModule, HeaderComponent, FooterComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    HeaderComponent,
+    FooterComponent,
+    TranslateModule,
+  ],
   templateUrl: './register-page.component.html',
   styleUrls: ['./register-page.component.scss'],
 })
 export class RegisterPageComponent {
   data: RegisterModel = new RegisterModel('', '', '');
-  auth = inject(Auth)
+  auth = inject(Auth);
 
   register() {
     if (this.data.password !== this.data.confirmPassword) {
@@ -68,10 +78,21 @@ export class RegisterPageComponent {
       return;
     }
 
-    from(createUserWithEmailAndPassword(this.auth, this.data.email, this.data.password)).pipe(take(1), catchError(() => {
-      alert('Something went wrong');
-      return NEVER;
-    })).subscribe(() => alert('Success!'));
+    from(
+      createUserWithEmailAndPassword(
+        this.auth,
+        this.data.email,
+        this.data.password
+      )
+    )
+      .pipe(
+        take(1),
+        catchError(() => {
+          alert('Something went wrong');
+          return NEVER;
+        })
+      )
+      .subscribe(() => alert('Success!'));
   }
 
   doNothing($event: ClipboardEvent) {
