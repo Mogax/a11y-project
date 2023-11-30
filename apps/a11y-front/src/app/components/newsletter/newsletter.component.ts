@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {timer} from "rxjs";
 import {FormsModule} from "@angular/forms";
@@ -16,7 +16,7 @@ export class NewsletterComponent {
   email = '';
 
   constructor() {
-    timer(5000).subscribe(() => {
+    timer(500000).subscribe(() => {
       this.show = true;
     });
   }

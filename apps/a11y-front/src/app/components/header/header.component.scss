@@ -1,24 +1,41 @@
 .header {
-  height: 56px;
-  background-color: #069b8f;
-  color: aqua;
-  margin-bottom: 1in;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #0E0227;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
 
   &__logo {
-    float:left;
-    padding: 10px;
-    font-size: 3em;
-    font-weight: bolder;
+    cursor: pointer;
   }
 
   &__menu {
-    font-size: 24;
-    padding: 10px;
+    display: flex;
+    gap: 1em;
+    font-size: 1.1em;
+    align-items: center;
+    font-weight: 500;
+
+    a {
+      cursor: pointer;
+
+      &:hover {
+        font-weight: 600;
+        text-decoration: underline 0.15em !important;
+      }
+    }
+
+    &-link__signup {
+      background-color: #6528F7;
+      color: #F8F8F8;
+    }
 
     & > * {
-      padding: 10px 50px;
-      display:inline-block;
-      color: aquamarine;
+      padding: 0.75em 1em;
+      display: inline-block;
       text-decoration: none !important;
     }
   }
