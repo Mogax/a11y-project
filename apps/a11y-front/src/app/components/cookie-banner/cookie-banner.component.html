@@ -1,8 +1,8 @@
-@if (showCookieBanner) {
+<div *ngIf="showCookieBanner">
   <div class="banner">
-    <h1> Cookies </h1>
-    <p> This site uses cookies to improve your experience. </p>
-    <p> This includes functional, targeted ads and social networks cookies. </p>
-    <button class="button" (click)="dismissBanner()"> OK </button>
+    <h1> {{ 'cookies.title' | translate }} </h1>
+    <p> {{ 'cookies.text' | translate }} </p>
+    <p> {{ 'cookies.textSecondary' | translate }} </p>
+    <button class="button" (click)="dismissBanner()"> {{ 'cookies.button' | translate }} </button>
   </div>
-}
+</div>
