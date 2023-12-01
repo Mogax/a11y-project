@@ -3,7 +3,6 @@ import { RouterModule } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { en } from './translations/en';
 import { fr } from './translations/fr';
-import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
 
 @Component({
