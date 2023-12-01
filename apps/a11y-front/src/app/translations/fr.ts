@@ -103,4 +103,5 @@ export const fr = {
       "Il s'agit notamment de cookies fonctionnels, de publicités ciblées et de cookies de réseaux sociaux.",
     button: 'OK',
   },
+  switchLanguage: 'Passer en anglais',
 };

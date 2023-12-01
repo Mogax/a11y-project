@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { NewsService } from './news.service';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'a11y-news-page',
@@ -18,7 +18,9 @@ export class NewsPageComponent {
   }
 
   private readonly newsService = inject(NewsService);
-  allNews$ = this.newsService.getNews();
+  private translate = inject(TranslateService);
+
+  allNews$ = this.newsService.getNews(this.translate.currentLang);
 
   private setNotifications() {
     Notification.requestPermission().then((permission) => {
