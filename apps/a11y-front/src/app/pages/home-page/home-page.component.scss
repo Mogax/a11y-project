@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Pixel;
+  src: url(../../../assets/fonts/SerifPixel7-llXe.ttf);
+}
+
 .section {
   // height: 100vh;
 
@@ -128,41 +133,119 @@
 }
 
 .section--3 {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
   margin-top: 2em;
 
-  .testimony {
+  .section__content-2 {
+    display: flex;
+    justify-content: end;
+    gap: 3em;
+  }
+
+  .testimony-1 {
+    position: relative;
     display: flex;
     flex-direction: row;
+    background-color: #0E0227;
+    width: 75%;
+    color: #F8F8F8;
+    margin: 0em 2em;
 
-    // &__image {
-    //   float:left;
-
-      img {
-        width: 14rem;
-        height: 14rem;
-      }
+    img {
+      top: 3em;
+      left: -1em;
+      width: 14rem;
+      height: 14rem;
     }
 
-    // &__quote {
-    //   padding: 100px 100px 0 300px;
-    //   font-size: 20px;
-    // }
+    &__quote-1 {
+      line-height: 3em;
+      font-size: 1em;
+      padding: 0em 1em;
+      width: 75%;
+    }
 
-    // &__author {
-    //   padding: 100px 100px 0 300px;
-    //   text-align: right;
-    //   font-style: italic;
-    //   color: #ccc;
-    // }
+    &__author-1 {
+      padding: 3em 1em;
+      text-align: end;
+      font-family: Pixel;
+    }
   }
 
-.gallery {
-  img {
-    width:100%;
+  .testimony-2 {
+    position: relative;
+    display: grid;
+    flex-direction: row;
+    background-color: #6528F7;
+    width: 75%;
+    color: #F8F8F8;
+    margin: 0em 2em;
+
+    img {
+      position: absolute;
+      top: 3em;
+      right: -1em;
+      width: 14rem;
+      height: 14rem;
+    }
+
+    &__image-2 {
+      display: flex;
+      justify-content: end;
+    }
+
+    &__quote-2 {
+      line-height: 3em;
+      font-size: 1em;
+      padding: 0em 1em;
+      width: 75%;
+      text-align: end;
+    }
+
+    &__author-2 {
+      padding: 3em 1em;
+      font-family: Pixel;
+    }
+  }
+}
+
+.section--4 {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  margin-top: 3em;
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .image__caption {
-    text-align:center;
+  .images-1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .images-2 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image-1 {
+    width: 60%;
+  }
+
+  .image-2 {
+    width: 70%;
+  }
+
+  .image-3 {
+    width: 60%;
+  }
+
+  .image-4 {
+    width: 80%;
   }
 }
