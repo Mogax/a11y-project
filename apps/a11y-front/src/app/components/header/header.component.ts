@@ -21,6 +21,10 @@ export class HeaderComponent {
   private router = inject(Router);
   authService = inject(AuthService);
 
+  goToHome() {
+    this.router.navigateByUrl('/');
+  }
+
   goToContact() {
     this.router.navigateByUrl('/contact');
   }
@@ -39,6 +43,10 @@ export class HeaderComponent {
 
   goToNews() {
     this.router.navigateByUrl('/news');
+  }
+
+  goToList() {
+    this.router.navigateByUrl('/lists');
   }
 
   logout() {

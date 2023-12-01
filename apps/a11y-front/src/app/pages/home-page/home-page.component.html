@@ -1,96 +1,125 @@
 <a11y-header></a11y-header>
 
 <div class="section section--1">
-  <div class="section__title">
-    {{'homePage.presentation.title' | translate}}
-  </div>
-
   <div class="section__content">
+    <img class="section__image" src="../../../assets/home_image.jpg" alt='accessibility keyboard'>
+    <!-- <div> Photo by <a href="https://unsplash.com/@elizabeth_woolner?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Elizabeth Woolner</a> on <a href="https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-desk-9xxNZCJZ8bA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></div> -->
     <div class="section__right">
-        <img src="assets/elizabeth-woolner-9xxNZCJZ8bA-unsplash.jpg" alt="A photo." />
-      <div>{{'homePage.images.photo' | translate}}<a href="https://unsplash.com/@elizabeth_woolner?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="nofollow">Elizabeth Woolner</a>{{'homePage.images.on' | translate}}<a href="https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-desk-9xxNZCJZ8bA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></div>
-
-    </div>
-    <div class="section__left">
-      <div class="paragraph">{{'homePage.presentation.text' | translate}}</div>
+      <div class="section__title">
+        {{'homePage.presentation.title' | translate}}
+      </div>
+      <div class="paragraph">
+        <span>{{'homePage.presentation.text.first' | translate}}</span>
+        <span>{{'homePage.presentation.text.second' | translate}}
+        </span>
+        <span>{{'homePage.presentation.text.third' | translate}}</span>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="section section--2">
-  <div class="section__title">{{'homePage.strengths.title' | translate}}</div>
+  <div class="section__left">
+    <div class="section__title">
+      {{'homePage.strengths.title' | translate}}
+    </div>
+  </div>
 
   <div class="section__content">
-    <div class="card card--1">
-      <div class="card__header">{{'homePage.strengths.expertise.title' | translate}}</div>
-      <div class="card__body">{{'homePage.strengths.expertise.text' | translate}}</div>
+    <div>
+      <div class="card card--1">
+        <div class="card__header-1">{{'homePage.strengths.expertise.title' | translate}}</div>
+        <div class="card__body">{{'homePage.strengths.expertise.text' | translate}}</div>
+      </div>
+
+      <div class="card card--2">
+        <div class="card__header-2">{{'homePage.strengths.date.title' | translate}}</div>
+        <div class="card__body">{{'homePage.strengths.date.text' | translate}}</div>
+      </div>
     </div>
-    <div class="placeholder"></div>
-    <div class="card card--2">
-      <div class="card__header">{{'homePage.strengths.details.title' | translate}}</div>
-      <div class="card__body">{{'homePage.strengths.details.text' | translate}}</div>
-    </div>
-    <div class="placeholder"></div>
-    <div class="card card--3">
-      <div class="card__header">{{'homePage.strengths.date.title' | translate}}</div>
-      <div class="card__body">{{'homePage.strengths.date.text' | translate}}</div>
-    </div>
-    <div class="placeholder"></div>
-    <div class="card card--4">
-      <div class="card__header">{{'homePage.strengths.support.title' | translate}}</div>
-      <div class="card__body">{{'homePage.strengths.support.text' | translate}}<a href="/contact">{{'homePage.strengths.support.link' | translate}}</a></div>
+
+    <div>
+      <div class="card card--2">
+        <div class="card__header-2">{{'homePage.strengths.details.title' | translate}}</div>
+        <div class="card__body">{{'homePage.strengths.details.text' | translate}}</div>
+      </div>
+
+      <div class="card card--1">
+        <div class="card__header-1">{{'homePage.strengths.support.title' | translate}}</div>
+        <div class="card__body">{{'homePage.strengths.support.text' | translate}}<a href="/contact">here</a></div>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="section section--3">
-  <div class="section__title">{{'homePage.testimonies.title' | translate}}</div>
-  <div class="section__content">
-    <div class="testimony">
+  <div class="section__right-testinomies">
+    <div class="section__title-testinomies">
+      {{'homePage.testimonies.title' | translate}}
+    </div>
+  </div>
+
+  <div class="section__content-1">
+    <div class="testimony-1">
       <div class="testimony__image">
-        <img src="assets/home-testimony-portrait-1.png" alt="A photo." />
+        <img src="assets/home-testimony-portrait-1.png" alt="testimony portrait" />
       </div>
       <div class="testimony__content">
-        <div class="testimony__quote">{{'homePage.testimonies.sandraText' | translate}}</div>
-        <div class="testimony__author">{{'homePage.testimonies.sandraUser' | translate}}</div>
+        <div class="testimony-1__quote-1">
+          <span>
+            {{'homePage.testimonies.sandraText' | translate}}
+          </span>
+        </div>
+        <div class="testimony-1__author-1"><span>{{'homePage.testimonies.sandraUser' | translate}}</span></div>
       </div>
     </div>
-    <div class="testimony">
-      <div class="testimony__image">
-        <img src="assets/home-testimony-portrait-2.png" alt="A photo." />
-      </div>
+  </div>
+
+  <div class="section__content-2">
+    <div class="testimony-2">
       <div class="testimony__content">
-        <div class="testimony__quote">{{'homePage.testimonies.michaelText' | translate}}</div>
-        <div class="testimony__author">{{'homePage.testimonies.michaelUser' | translate}}</div>
+        <div class="testimony-2__quote-2">{{'homePage.testimonies.michaelText' | translate}}</div>
+        <div class="testimony-2__author-2"><span>{{'homePage.testimonies.michaelUser' | translate}}</span></div>
+      </div>
+      <div class="testimony__image">
+        <img src="assets/home-testimony-portrait-2.png" alt="testimony portrait" />
       </div>
     </div>
   </div>
 </div>
 
-<div class="section gallery">
-  <div class="section__title">{{'homePage.images.title' | translate}}</div>
+<div class="section section--4">
+  <div class="section__left">
+    <div class="section__title">
+      {{'homePage.images.title' | translate}}
+    </div>
+  </div>
   <div class="section__content">
-    <div class="image">
-      <img src="assets/home-page-gallery-1.jpg"/>
-      <div class="image__caption">{{'homePage.images.photo' | translate}}<a href="https://unsplash.com/@sigmund?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="nofollow">Sigmund</a>{{'homePage.images.on' | translate}}<a href="https://unsplash.com/photos/person-holding-black-plastic-case-HE1zW44Zm_Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="nofollow">Unsplash</a>
+    <div class="images-1">
+      <div class="image">
+        <img class="image-1" src="assets/home-page-gallery-1.jpg" alt="Sigmund accessibility keyboard"/>
+        <div class="image__caption">{{'homePage.images.photo' | translate}} <a href="https://unsplash.com/@sigmund?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sigmund</a> {{'homePage.images.on' | translate}}<a href="https://unsplash.com/photos/person-holding-black-plastic-case-HE1zW44Zm_Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       </div>
     </div>
 
-    <div class="image">
-      <img src="assets/home-page-gallery-2.jpg"/>
-      <div class="image__caption">{{'homePage.images.photo' | translate}}<a href="https://unsplash.com/@elizabeth_woolner?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="nofollow">Elizabeth Woolner</a>{{'homePage.images.on' | translate}}<a href="https://unsplash.com/photos/a-persons-hand-on-a-table-with-a-chain-attached-to-it-oRZJSFcFjNk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="nofollow">Unsplash</a>
+      <div class="image">
+        <img class="image-2" src="assets/home-page-gallery-2.jpg" alt="Elizabeth Woolner virtual keyboard"/>
+        <div class="image__caption">{{'homePage.images.photo' | translate}} <a href="https://unsplash.com/@elizabeth_woolner?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Elizabeth Woolner</a> {{'homePage.images.on' | translate}} <a href="https://unsplash.com/photos/a-persons-hand-on-a-table-with-a-chain-attached-to-it-oRZJSFcFjNk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </div>
       </div>
     </div>
 
-    <div class="image">
-      <img src="assets/home-page-gallery-3.jpg"/>
-      <div class="image__caption">{{'homePage.images.photo' | translate}}<a href="https://unsplash.com/@ivalex?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="nofollow">Ivan Aleksic</a>{{'homePage.images.on' | translate}}<a href="https://unsplash.com/photos/woman-in-black-long-sleeve-shirt-covering-her-face-hko-iWhYdYE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="nofollow">Unsplash</a>
+    <div class="images-2">
+      <div class="image">
+        <img class="image-3" src="assets/home-page-gallery-3.jpg" alt="Ivan Aleksic picture"/>
+        <div class="image__caption">{{'homePage.images.photo' | translate}} <a href="https://unsplash.com/@ivalex?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ivan Aleksic</a> {{'homePage.images.on' | translate}} <a href="https://unsplash.com/photos/woman-in-black-long-sleeve-shirt-covering-her-face-hko-iWhYdYE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </div>
       </div>
-    </div>
 
-    <div class="image">
-      <img src="assets/home-page-gallery-4.jpg"/>
-      <div class="image__caption">{{'homePage.images.photo' | translate}}<a href="https://unsplash.com/@franganillo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="nofollow">Jorge Franganillo</a>{{'homePage.images.on' | translate}}<a href="https://unsplash.com/photos/man-wearing-red-crew-neck-sweater-with-teal-and-black-backpack-outdoor-during-daytime-6KO9KV8QP-c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" rel="nofollow">Unsplash</a>
+      <div class="image">
+        <img class="image-4" src="assets/home-page-gallery-4.jpg" alt="Jorge Franganillo picture"/>
+        <div class="image__caption">{{'homePage.images.photo' | translate}} <a href="https://unsplash.com/@franganillo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jorge Franganillo</a>{{'homePage.images.on' | translate}} <a href="https://unsplash.com/photos/man-wearing-red-crew-neck-sweater-with-teal-and-black-backpack-outdoor-during-daytime-6KO9KV8QP-c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </div>
       </div>
     </div>
   </div>

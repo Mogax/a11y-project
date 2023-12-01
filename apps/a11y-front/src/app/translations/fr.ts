@@ -12,10 +12,11 @@ export const fr = {
   homePage: {
     presentation: {
       title: 'Qui sommes-nous ?',
-      text:
-        "Le site a11y a pour objectif de vous présenter les meilleures pratiques en matière de conception de sites web et d'accessibilité. " +
-        'Nous sommes un site web vraiment moderne et facilement utilisable par tout le monde. Enfin. Presque. ' +
-        'Pas vraiment. AU MOINS NOUS AVONS ESSAYÉ OK !!!!!',
+      text: {
+        first:"Le site a11y a pour objectif de vous présenter les meilleures pratiques en matière de conception de sites web et d'accessibilité.",
+        second:'Nous sommes un site web vraiment moderne et facilement utilisable par tout le monde. Enfin. Presque.',
+        third:'Pas vraiment. AU MOINS NOUS AVONS ESSAYÉ OK !!!!! '
+      }
     },
     strengths: {
       title: 'Nos atouts',

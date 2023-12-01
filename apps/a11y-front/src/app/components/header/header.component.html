@@ -1,33 +1,33 @@
 <div class="header">
-  <div class="header__logo"> a11y Project</div>
-  <div class="header__menu">
-    <a class="header__menu-link" routerLink="/">
-      {{ 'header.home' | translate }}
+  <div class="header__logo">
+    <a class="header__menu-link" (click)="goToHome()">
+      <img src="../../../assets/icons/logo.svg" alt="logo a11y">
     </a>
-    <span class="header__menu-link" (click)="goToAbout()">
+  </div>
+  <div class="header__menu">
+    <a class="header__menu-link" (click)="goToAbout()">
       {{ 'header.about' | translate }}
-    </span>
-    <span class="header__menu-link" (click)="goToContact()">
-      {{ 'header.contact' | translate }}
-    </span>
-    <span class="header__menu-link" (click)="goToNews()">
+    </a>
+    <a class="header__menu-link" (click)="goToContact()">
+      {{ 'header.contact' | translate }}    </a>
+    <a class="header__menu-link" (click)="goToNews()">
       {{ 'header.news' | translate }}
-    </span>
-    <a class="header__menu-link" routerLink="/lists">
+    </a>
+    <a class="header__menu-link" (click)="goToList()">
       {{ 'header.lists' | translate }}
     </a>
     <div *ngIf="!authService.isLoggedIn()">
-      <span class="header__menu-link" (click)="goToLogin()">
-      {{ 'header.login' | translate }}
-    </span>
-      <span class="header__menu-link" (click)="goToRegister()">
-      {{ 'header.register' | translate }}
-    </span>
+      <a class="header__menu-link" (click)="goToLogin()">
+        {{ 'header.login' | translate }}
+      </a>
+      <a class="signup" (click)="goToRegister()">
+        {{ 'header.register' | translate }}
+      </a>
     </div>
     <div *ngIf="authService.isLoggedIn()">
-      <span class="header__menu-link" (click)="logout()">
-      {{ 'header.logout' | translate }}
-    </span>
+      <a class="signup" (click)="logout()">
+        {{ 'header.logout' | translate }}
+      </a>
     </div>
     <a11y-language-switcher/>
   </div>

@@ -15,10 +15,11 @@ export const en = {
   homePage: {
     presentation: {
       title: 'Who are we ?',
-      text:
-        'The a11y website aims at showing you the best practices regarding web design and accessibility. ' +
-        'We are a really modern website that is easily usable by everyone. Well. ' +
-        'Almost. Not really. AT LEAST WE TRIED OK!!!!!',
+      text: {
+        first:'The a11y website aims at showing you the best practices regarding web design and accessibility. ',
+        second:'We are a really modern website that is easily usable by everyone. Well. ',
+        third:'Almost. Not really. AT LEAST WE TRIED OK!!!!! '
+      }
     },
     strengths: {
       title: 'Our strengths',
