@@ -1,13 +1,13 @@
-import {Component} from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {TranslateService} from "@ngx-translate/core";
-import {en} from "./translations/en";
-import {NewsletterComponent} from "./components/newsletter/newsletter.component";
-import {CookieBannerComponent} from "./components/cookie-banner/cookie-banner.component";
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { en } from './translations/en';
+import { fr } from './translations/fr';
+import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, NewsletterComponent, CookieBannerComponent],
+  imports: [RouterModule, CookieBannerComponent],
   selector: 'a11y-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -21,8 +21,9 @@ export class AppComponent {
 
   private manageTranslations() {
     // If you need to add a language, add it to the table below, and add a new "translate.setTranslation" line as well.
-    const availableLanguages = ['en'];
+    const availableLanguages = ['en', 'fr'];
     this.translate.setTranslation('en', en);
+    this.translate.setTranslation('fr', fr);
     this.translate.setDefaultLang(availableLanguages[0]);
 
     // This is a very basic language management system. It does not manage locales (en-US, en-GB, etc.), and the files

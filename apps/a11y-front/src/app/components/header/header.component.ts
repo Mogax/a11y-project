@@ -1,12 +1,19 @@
-import {Component, inject} from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {Router, RouterLink} from "@angular/router";
-import {AuthService} from "../../services/auth.service";
+import { Router, RouterLink } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 @Component({
   selector: 'a11y-header',
   standalone: true,
-    imports: [CommonModule, RouterLink],
+  imports: [
+    CommonModule,
+    RouterLink,
+    TranslateModule,
+    LanguageSwitcherComponent,
+  ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -45,5 +52,4 @@ export class HeaderComponent {
   logout() {
     this.authService.logout();
   }
-
 }

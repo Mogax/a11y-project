@@ -6,29 +6,29 @@
   </div>
   <div class="header__menu">
     <a class="header__menu-link" (click)="goToAbout()">
-      About
+      {{ 'header.about' | translate }}
     </a>
     <a class="header__menu-link" (click)="goToContact()">
-      Contact
-    </a>
+      {{ 'header.contact' | translate }}    </a>
     <a class="header__menu-link" (click)="goToNews()">
-      News
+      {{ 'header.news' | translate }}
     </a>
     <a class="header__menu-link" (click)="goToList()">
-      Lists
+      {{ 'header.lists' | translate }}
     </a>
-    @if (!authService.isLoggedIn()) {
+    <div *ngIf="!authService.isLoggedIn()">
       <a class="header__menu-link" (click)="goToLogin()">
-      Log in
+        {{ 'header.login' | translate }}
       </a>
-      <a class="header__menu-link__signup" (click)="goToRegister()">
-      Sign up
+      <a class="signup" (click)="goToRegister()">
+        {{ 'header.register' | translate }}
       </a>
-    } @else {
-      <a class="header__menu-link__logout" (click)="logout()">
-      Log out
+    </div>
+    <div *ngIf="authService.isLoggedIn()">
+      <a class="signup" (click)="logout()">
+        {{ 'header.logout' | translate }}
       </a>
-    }
-
+    </div>
+    <a11y-language-switcher/>
   </div>
 </div>
