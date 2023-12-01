@@ -108,4 +108,7 @@ export const en = {
     button: 'OK',
   },
   switchLanguage: 'Switch to french',
+  siteTitle: 'A11y-front: most accessible website EVER',
+  siteMetaDescription:
+    'A11y-front: Pinnacle of web accessibility and UI/UX design. Strict adherence to A11y standards, delivering an outstanding experience for everyone.',
 };

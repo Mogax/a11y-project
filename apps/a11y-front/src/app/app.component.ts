@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { en } from './translations/en';
 import { fr } from './translations/fr';
 import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   standalone: true,
@@ -15,8 +16,19 @@ import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.
 export class AppComponent {
   title = 'a11y-front';
 
-  constructor(private readonly translate: TranslateService) {
+  constructor(
+    private readonly translate: TranslateService,
+    private readonly titleService: Title,
+    private readonly metaService: Meta
+  ) {
     this.manageTranslations();
+  }
+
+  ngOnInit(): void {
+    this.translate.onLangChange.subscribe(() => {
+      this.updateTitleAndMeta();
+    });
+    this.updateTitleAndMeta();
   }
 
   private manageTranslations() {
@@ -36,5 +48,20 @@ export class AppComponent {
         return;
       }
     }
+  }
+
+  private updateTitleAndMeta() {
+    this.translate.get('siteTitle').subscribe((translatedTitle: string) => {
+      this.titleService.setTitle(translatedTitle);
+    });
+
+    this.translate
+      .get('siteMetaDescription')
+      .subscribe((translatedDescription: string) => {
+        this.metaService.updateTag({
+          name: 'description',
+          content: translatedDescription,
+        });
+      });
   }
 }
