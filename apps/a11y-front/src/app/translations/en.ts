@@ -4,13 +4,13 @@
 export const en = {
   header: {
     home: 'Home',
-    About: 'About',
-    Contact: 'Contact',
-    News: 'News',
-    Lists: 'Lists',
-    Login: 'Login',
-    Register: 'Register',
-    Logout: 'Logout',
+    about: 'About',
+    contact: 'Contact',
+    news: 'News',
+    lists: 'Lists',
+    login: 'Login',
+    register: 'Register',
+    logout: 'Logout',
   },
   homePage: {
     presentation: {
@@ -106,4 +106,5 @@ export const en = {
       'This includes functional, targeted ads and social networks cookies.',
     button: 'OK',
   },
+  switchLanguage: 'Switch to french',
 };
