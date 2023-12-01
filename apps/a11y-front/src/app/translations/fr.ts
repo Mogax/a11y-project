@@ -104,4 +104,7 @@ export const fr = {
     button: 'OK',
   },
   switchLanguage: 'Passer en anglais',
+  siteTitle: 'A11y-front: Le site web le plus accessible de tous les temps',
+  siteMetaDescription:
+    "A11y-front: Le summum de l'accessibilité du web et de la conception UI/UX. Adhésion stricte aux normes A11y, offrant une expérience exceptionnelle à tous.",
 };
