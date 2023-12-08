@@ -13,19 +13,15 @@
           <div class="float-left">{{'contactPage.nameLabel' | translate}}<input [(ngModel)]="data.name" name="name" required #name="ngModel" tabindex="1"
                                                [ngClass]="{'error': name.invalid}"/></div>
         </td>
-        <td>
-          <div>{{'contactPage.ageLabel' | translate}}<input [(ngModel)]="data.age" name="age" required pattern="[1-9][0-9]*"
-                           #age="ngModel" [ngClass]="{'error': age.invalid}" tabindex="3"/></div>
-        </td>
       </tr>
       <tr>
         <td>
           <div>{{'contactPage.phoneLabel' | translate}}<input [(ngModel)]="data.phoneNumber" name="phoneNumber" required pattern="\+[0-9]{11}"
-                                    #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}" tabindex="4"/></div>
+                                    #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}" tabindex="2"/></div>
         </td>
         <td>
           <div class="float-left">{{'contactPage.emailLabel' | translate}}<input type="email" [(ngModel)]="data.email" name="email" required
-                                               #email="ngModel" [ngClass]="{'error': email.invalid}" tabindex="2"/></div>
+                                               #email="ngModel" [ngClass]="{'error': email.invalid}" tabindex="3"/></div>
         </td>
       </tr>
 
