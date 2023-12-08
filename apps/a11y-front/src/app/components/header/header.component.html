@@ -1,31 +1,31 @@
 <div class="header">
-  <div class="header__logo">
+  <div class="header__logo" tabindex="1" (keydown.enter)="goToHome()">
     <a class="header__menu-link" (click)="goToHome()">
       <img src="../../../assets/icons/logo.svg" alt="logo a11y">
     </a>
   </div>
   <div class="header__menu">
-    <a class="header__menu-link" (click)="goToAbout()">
+    <a class="header__menu-link" tabindex="1" (keydown.enter)="goToAbout()" (click)="goToAbout()">
       {{ 'header.about' | translate }}
     </a>
-    <a class="header__menu-link" (click)="goToContact()">
+    <a class="header__menu-link" tabindex="2" (keydown.enter)="goToContact()" (click)="goToContact()">
       {{ 'header.contact' | translate }}    </a>
-    <a class="header__menu-link" (click)="goToNews()">
+    <a class="header__menu-link" tabindex="3" (keydown.enter)="goToNews()" (click)="goToNews()">
       {{ 'header.news' | translate }}
     </a>
-    <a class="header__menu-link" (click)="goToList()">
+    <a class="header__menu-link" tabindex="4" (keydown.enter)="goToList()" (click)="goToList()">
       {{ 'header.lists' | translate }}
     </a>
     <div *ngIf="!authService.isLoggedIn()">
-      <a class="header__menu-link" (click)="goToLogin()">
+      <a class="header__menu-link" tabindex="5" (keydown.enter)="goToLogin()" (click)="goToLogin()">
         {{ 'header.login' | translate }}
       </a>
-      <a class="signup" (click)="goToRegister()">
+      <a class="signup" tabindex="6" (keydown.enter)="goToRegister()" (click)="goToRegister()">
         {{ 'header.register' | translate }}
       </a>
     </div>
     <div *ngIf="authService.isLoggedIn()">
-      <a class="signup" (click)="logout()">
+      <a class="signup" tabindex="7" (keydown.enter)="logout()" (click)="logout()">
         {{ 'header.logout' | translate }}
       </a>
     </div>
