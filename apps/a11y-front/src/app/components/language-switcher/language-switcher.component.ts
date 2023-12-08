@@ -12,10 +12,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class LanguageSwitcherComponent {
   constructor(private translate: TranslateService) {}
 
-  switchLanguage() {
-    const currentLang = this.translate.currentLang;
-    const newLang = currentLang === 'en' ? 'fr' : 'en';
+  switchToFr() {
+    const newLang = 'fr'
+    this.translate.use(newLang);
+  }
 
+  switchToEn() {
+    const newLang = 'en';
     this.translate.use(newLang);
   }
 }
