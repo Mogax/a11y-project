@@ -13,10 +13,12 @@ export const fr = {
     presentation: {
       title: 'Qui sommes-nous ?',
       text: {
-        first:"Le site a11y a pour objectif de vous présenter les meilleures pratiques en matière de conception de sites web et d'accessibilité.",
-        second:'Nous sommes un site web vraiment moderne et facilement utilisable par tout le monde. Enfin. Presque.',
-        third:'Pas vraiment. AU MOINS NOUS AVONS ESSAYÉ OK !!!!! '
-      }
+        first:
+          "Le site a11y a pour objectif de vous présenter les meilleures pratiques en matière de conception de sites web et d'accessibilité.",
+        second:
+          'Nous sommes un site web vraiment moderne et facilement utilisable par tout le monde. Enfin. Presque.',
+        third: 'Pas vraiment. AU MOINS NOUS AVONS ESSAYÉ OK !!!!! ',
+      },
     },
     strengths: {
       title: 'Nos atouts',
@@ -75,21 +77,23 @@ export const fr = {
     emailLabel: 'Email: ',
     passwordLabel: 'Mot de passe: ',
     confirmPasswordLabel: 'Confirmer le Mot de passe: ',
-    resetButton: 'reset',
+    resetButton: 'réinitialiser',
     loginButton: 'connexion',
     registerButton: 'inscription',
+    newsletter:
+      'Grâce à la newsletter, vous ne manquerez pas nos dernières nouvelles ! Donnez-nous votre adresse email et vous aurez la certitude de recevoir le meilleur contenu dans votre boîte aux lettres.',
   },
   footer:
-    'Créé avec passion (et un peu de sadisme) par Fred &copy ; HemIT 2023 (bien que nous ne soyons pas sûrs de vouloir en être responsables...)',
+    'Créé avec passion (et un peu de sadisme) par Fred ©HemIT 2023 (bien que nous ne soyons pas sûrs de vouloir en être responsables...)',
   notAllowedLoggedOutPage: {
     text: "VOUS N'ÊTES PAS AUTORISÉ À VOIR CETTE PAGE LORSQUE VOUS ÊTES CONNECTÉ !!!!",
     gentle: "Veuillez d'abord vous déconnecter",
-    back: '&larr; Retour',
+    back: '<- Retour',
   },
   notAllowedLoggedInPage: {
     text: "VOUS N'ÊTES PAS AUTORISÉ À CONSULTER CETTE PAGE SI VOUS N'ÊTES PAS CONNECTÉ !!!!",
     gentle: "Veuillez d'abord vous connecter",
-    back: '&larr; Retour',
+    back: '<- Retour',
   },
   listsPage: {
     text: 'la page lists fonctionne !',

@@ -16,10 +16,12 @@ export const en = {
     presentation: {
       title: 'Who are we ?',
       text: {
-        first:'The a11y website aims at showing you the best practices regarding web design and accessibility. ',
-        second:'We are a really modern website that is easily usable by everyone. Well. ',
-        third:'Almost. Not really. AT LEAST WE TRIED OK!!!!! '
-      }
+        first:
+          'The a11y website aims at showing you the best practices regarding web design and accessibility. ',
+        second:
+          'We are a really modern website that is easily usable by everyone. Well. ',
+        third: 'Almost. Not really. AT LEAST WE TRIED OK!!!!! ',
+      },
     },
     strengths: {
       title: 'Our strengths',
@@ -81,18 +83,20 @@ export const en = {
     resetButton: 'reset',
     loginButton: 'login',
     registerButton: 'register',
+    newsletter:
+      'With the newsletter wou will not miss our latest news! Give us your email address and you can be confident to get only the best content in your mailbox',
   },
   footer:
-    'Created with Passion (and a bit of sadism) by Fred. &copy; HemIT 2023 (although not sure we want to be made accountable for this...)',
+    'Created with Passion (and a bit of sadism) by Fred. ©HemIT 2023 (although not sure we want to be made accountable for this...)',
   notAllowedLoggedOutPage: {
     text: 'YOU ARE NOT ALLOWED TO VIEW THIS PAGE WHEN LOGGED IN!!!! ',
     gentle: 'Please log out first',
-    back: '&larr; Back',
+    back: '<- Back',
   },
   notAllowedLoggedInPage: {
     text: 'YOU ARE NOT ALLOWED TO VIEW THIS PAGE WHEN NOT CONNECTED!!!! ',
     gentle: 'Please log in first',
-    back: '&larr; Back',
+    back: '<- Back',
   },
   listsPage: {
     text: 'lists-page works!',

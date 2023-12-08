@@ -8,7 +8,7 @@
     @for (news of (allNews$ | async); track news.id) {
       <div class="news__item">
         <div class="news__header">
-          <div class="news__date">{{news.date | date}}</div>
+          <div class="news__date">{{formatDate(news.date)}}</div>
           <h2><a [href]="'news/'+news.id"> {{news.title}}</a></h2>
         </div>
         <div class="news__content">
