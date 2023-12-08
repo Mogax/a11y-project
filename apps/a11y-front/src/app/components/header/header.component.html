@@ -1,5 +1,8 @@
 <div class="header">
-  <div class="header__logo" tabindex="1" (keydown.enter)="goToHome()">
+  <div class="header__logo">
+    <a class="header__menu-burger" (click)="openMenu()">
+      <img src="../../../assets/icons/burger-icon.svg" alt="menu burger">
+    </a>
     <a class="header__menu-link" (click)="goToHome()">
       <img src="../../../assets/icons/logo.svg" alt="logo a11y">
     </a>
@@ -26,6 +29,34 @@
     </div>
     <div *ngIf="authService.isLoggedIn()">
       <a class="signup" tabindex="7" (keydown.enter)="logout()" (click)="logout()">
+        {{ 'header.logout' | translate }}
+      </a>
+    </div>
+    <a11y-language-switcher/>
+  </div>
+
+  <div class="header__menu-phone">
+    <a class="header__menu-link" (click)="goToAbout()">
+      {{ 'header.about' | translate }}
+    </a>
+    <a class="header__menu-link" (click)="goToContact()">
+      {{ 'header.contact' | translate }}    </a>
+    <a class="header__menu-link" (click)="goToNews()">
+      {{ 'header.news' | translate }}
+    </a>
+    <a class="header__menu-link" (click)="goToList()">
+      {{ 'header.lists' | translate }}
+    </a>
+    <div *ngIf="!authService.isLoggedIn()">
+      <a class="header__menu-link" (click)="goToLogin()">
+        {{ 'header.login' | translate }}
+      </a>
+      <a class="signup" (click)="goToRegister()">
+        {{ 'header.register' | translate }}
+      </a>
+    </div>
+    <div *ngIf="authService.isLoggedIn()">
+      <a class="signup" (click)="logout()">
         {{ 'header.logout' | translate }}
       </a>
     </div>

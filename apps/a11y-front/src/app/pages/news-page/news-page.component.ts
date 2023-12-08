@@ -12,7 +12,7 @@ registerLocaleData(localeFr);
 @Component({
   selector: 'a11y-news-page',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './news-page.component.html',
   styleUrls: ['./news-page.component.scss'],
   providers: [DatePipe, { provide: LOCALE_ID, useValue: 'fr' }],

@@ -1,15 +1,13 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { News, NewsService } from '../news-page/news.service';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
 import { Observable } from 'rxjs';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'a11y-news-details-page',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './news-details-page.component.html',
   styleUrls: ['./news-details-page.component.scss'],
 })

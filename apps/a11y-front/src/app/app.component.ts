@@ -5,10 +5,12 @@ import { en } from './translations/en';
 import { fr } from './translations/fr';
 import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
 import { Meta, Title } from '@angular/platform-browser';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, CookieBannerComponent],
+  imports: [RouterModule, CookieBannerComponent, HeaderComponent, FooterComponent],
   selector: 'a11y-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
