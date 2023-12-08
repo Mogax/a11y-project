@@ -215,6 +215,12 @@
   gap: 3em;
   margin-top: 3em;
 
+  .section__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .image {
     display: flex;
     flex-direction: column;
