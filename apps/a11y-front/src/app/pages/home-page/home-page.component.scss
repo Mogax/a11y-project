@@ -4,8 +4,6 @@
 }
 
 .section {
-  // height: 100vh;
-
   &__title {
     font-size: 3em;
     font-weight: 400;
@@ -220,32 +218,353 @@
   .image {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
   }
 
   .images-1 {
     display: flex;
     flex-direction: row;
+    gap: 2em;
   }
 
   .images-2 {
     display: flex;
     flex-direction: row;
+    gap: 2em;
   }
 
   .image-1 {
-    width: 60%;
+    width: 25em;
+    height: 20em;
   }
 
   .image-2 {
-    width: 70%;
+    width: 25em;
+    height: 20em
   }
 
   .image-3 {
-    width: 60%;
+    width: 25em;
+    height: 20em
   }
 
   .image-4 {
-    width: 80%;
+    width: 25em;
+    height: 20em
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .section {
+    &__title {
+      font-size: 2em;
+      font-weight: 400;
+      color: #F8F8F8;
+      text-align: center;
+    }
+
+    &__title-testinomies {
+      font-size: 2em;
+    }
+
+    .paragraph {
+      font-size: 1em;
+    }
+  }
+
+  .section--2 {
+    .card {
+      width: 45vh;
+      font-size: 0.90em;
+
+      &__header-1 {
+        font-size: 1.5rem;
+      }
+
+      &__header-2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .section--3 {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 2em;
+
+    .testimony-1 {
+      img {
+        width: 12rem;
+        height: 12rem;
+      }
+
+      &__quote-1 {
+        line-height: 3em;
+        font-size: 0.8em;
+        padding: 0em 1em;
+        width: 75%;
+      }
+
+      &__author-1 {
+        font-size: 0.8em;
+      }
+    }
+
+    .testimony-2 {
+      img {
+        width: 12rem;
+        height: 12rem;
+      }
+
+      &__quote-2 {
+        line-height: 3em;
+        font-size: 0.8em;
+        padding: 0em 1em;
+        width: 75%;
+      }
+
+      &__author-2 {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 910px){
+  .section {
+    &__title {
+      font-size: 2em;
+      font-weight: 400;
+      color: #F8F8F8;
+      text-align: center;
+    }
+
+    &__title-testinomies {
+      font-size: 2em;
+    }
+
+    .paragraph {
+      font-size: 1em;
+    }
+  }
+
+  .section--2 {
+    .section__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 55vh;
+      font-size: 0.90em;
+
+      &__header-1 {
+        font-size: 1.5rem;
+      }
+
+      &__header-2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .section--3 {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 2em;
+
+    .testimony-1 {
+      img {
+        width: 10rem;
+        height: 10rem;
+      }
+
+      &__quote-1 {
+        line-height: 2em;
+        font-size: 0.8em;
+        padding: 0em 1em;
+        width: 75%;
+      }
+
+      &__author-1 {
+        font-size: 0.8em;
+      }
+    }
+
+    .testimony-2 {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        position:unset;
+        top: 3em;
+        right: -1em;
+        width: 10rem;
+        height: 10rem;
+      }
+
+      &__image-2 {
+        display: flex;
+        justify-content: end;
+      }
+
+      &__quote-2 {
+        line-height: 2em;
+        font-size: 0.8em;
+        padding: 0em 1em;
+        width: 75%;
+        text-align: end;
+      }
+
+      &__author-2 {
+        padding: 3em 1em;
+        font-family: Pixel;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px){
+  .section {
+    &__title {
+      font-size: 1.5em;
+      font-weight: 400;
+      color: #F8F8F8;
+      text-align: center;
+    }
+
+    &__right {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 100%;
+      background-color: #6528F7;
+      z-index: 1;
+    }
+
+    &__title-testinomies {
+      font-size: 1.5em;
+    }
+
+    .paragraph {
+      font-size: 0.8em;
+    }
+  }
+
+  .section--2 {
+    .section__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 30vh;
+      font-size: 0.80em;
+
+      &__header-1 {
+        font-size: 1.2rem;
+      }
+
+      &__header-2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .section--3 {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 2em;
+
+    .testimony-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 10rem;
+        height: 10rem;
+      }
+
+      &__quote-1 {
+        line-height: 2em;
+        font-size: 0.8em;
+        padding: 0em 0em;
+        margin: auto;
+        width: 75%;
+        text-align: justify;
+      }
+
+      &__author-1 {
+        font-size: 0.8em;
+        margin: auto;
+        padding: 1em 3em;
+      }
+    }
+
+    .testimony-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        position:unset;
+        top: 3em;
+        right: -1em;
+        width: 10rem;
+        height: 10rem;
+      }
+
+      &__image-2 {
+        display: flex;
+        justify-content: end;
+      }
+
+      &__quote-2 {
+        line-height: 2em;
+        font-size: 0.8em;
+        padding: 0em 0em;
+        margin: auto;
+        width: 75%;
+        text-align: justify;
+      }
+
+      &__author-2 {
+        font-size: 0.8em;
+        margin: auto;
+        padding: 1em 3em;
+        font-family: Pixel;
+      }
+    }
+  }
+
+  .section--4 {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 3em;
+
+    .image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .images-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    .images-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
   }
 }

@@ -1,6 +1,31 @@
-
 .footer {
-  background-color: black;
-  color: #444;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-weight: 500;
+  color: #0E0227;
   text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: solid black;
+  background-color: #F8F8F8;
+  height: 3em;
+  width: 100%;
+}
+
+@media screen and (max-width: 1300px){
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-weight: 500;
+    font-size: 0.8em;
+    color: #0E0227;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: solid black;
+    background-color: #F8F8F8;
+  }
+
 }

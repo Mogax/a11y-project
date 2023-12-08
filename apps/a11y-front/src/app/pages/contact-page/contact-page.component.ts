@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import {HeaderComponent} from "../../components/header/header.component";
 
 export class ContactFormData {
   constructor(
@@ -18,7 +17,7 @@ export class ContactFormData {
 @Component({
   selector: 'a11y-contact-page',
   standalone: true,
-    imports: [CommonModule, FormsModule, TranslateModule, HeaderComponent],
+    imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.scss'],
 })

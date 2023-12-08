@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
 import { catchError, from, NEVER, take } from 'rxjs';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 export class RegisterModel {
@@ -21,8 +19,6 @@ export class RegisterModel {
   imports: [
     CommonModule,
     FormsModule,
-    HeaderComponent,
-    FooterComponent,
     TranslateModule,
   ],
   templateUrl: './register-page.component.html',

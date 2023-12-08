@@ -1,7 +1,13 @@
-<a11y-header></a11y-header>
+<div class="section">
+  <div class="section__content">
+    <div class="section__title">
+      <h1>{{'aboutPage.title' | translate}}</h1>
+    </div>
 
-<h1>{{'aboutPage.title' | translate}}</h1>
+    <div class="paragraph">
+      <div>{{'aboutPage.text' | translate}}</div>
+    </div>
 
-<div>{{'aboutPage.text' | translate}}</div>
-
-<div class="button" (click)="goBack()">{{ 'aboutPage.button.text' | translate }}</div>
+    <div class="button" (click)="goBack()">{{ 'aboutPage.button.text' | translate }}</div>
+  </div>
+</div>

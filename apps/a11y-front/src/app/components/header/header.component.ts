@@ -52,4 +52,8 @@ export class HeaderComponent {
   logout() {
     this.authService.logout();
   }
+
+  openMenu() {
+    // this.authService.logout();
+  }
 }

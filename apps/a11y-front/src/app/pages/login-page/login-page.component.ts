@@ -1,11 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from '../../components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from '../../components/header/header.component';
 import { RegisterModel } from '../register-page/register-page.component';
 import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
-import { take } from 'rxjs';
 import { TranslateModule } from '@ngx-translate/core';
 
 export class LoginModel {
@@ -17,9 +14,7 @@ export class LoginModel {
   standalone: true,
   imports: [
     CommonModule,
-    FooterComponent,
     FormsModule,
-    HeaderComponent,
     TranslateModule,
   ],
   templateUrl: './login-page.component.html',
