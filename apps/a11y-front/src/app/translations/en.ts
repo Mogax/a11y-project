@@ -109,9 +109,11 @@ export const en = {
     text: 'This site uses cookies to improve your experience.',
     textSecondary:
       'This includes functional, targeted ads and social networks cookies.',
-    button: 'OK',
+    accept: 'Accepted',
+    refused: 'Refused'
   },
   switchLanguage: 'Switch to french',
+  cookiesRefused: 'Remove cookies',
   siteTitle: 'A11y-front: most accessible website EVER',
   siteMetaDescription:
     'A11y-front: Pinnacle of web accessibility and UI/UX design. Strict adherence to A11y standards, delivering an outstanding experience for everyone.',
