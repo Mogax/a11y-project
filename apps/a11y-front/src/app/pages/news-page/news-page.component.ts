@@ -24,7 +24,7 @@ export class NewsPageComponent {
 
   private readonly newsService = inject(NewsService);
   private translate = inject(TranslateService);
-  protected actualLang = this.translate.currentLang === 'en' ? 'en' : 'fr';
+  protected actualLang = this.translate.currentLang === 'fr' ? 'fr' : 'en';
 
   allNews$ = this.newsService.getNews(this.translate.currentLang);
 
