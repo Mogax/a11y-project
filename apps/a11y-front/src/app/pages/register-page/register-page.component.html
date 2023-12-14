@@ -18,15 +18,15 @@
       <div class="label">
         <label for="confirmPassword">{{'authPage.confirmPasswordLabel' | translate}}</label>
       </div>
-      <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required (paste)="doNothing($event)" onpaste="event.preventDefault()"/>
+      <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required/>
     </div>
     <div class="label">
-      <input type="checkbox" id="newsletter" name="newsletter" />
+      <input type="checkbox" id="newsletter" name="newsletter"/>
       <label for="newsletter">Newsletter</label>
     </div>
     <div class="form-row">
       <button (click)="reset()">{{'authPage.resetButton' | translate}}</button>
-      <button (click)="register()" [disabled]="registerForm['form'].invalid">{{'authPage.registerButton' | translate}}</button>
+      <button (click)="register()" [disabled]="registerForm['form'].invalid || !checkPassword()">{{'authPage.registerButton' | translate}}</button>
     </div>
     <p>{{'authPage.newsletter' | translate}}</p>
   </form>

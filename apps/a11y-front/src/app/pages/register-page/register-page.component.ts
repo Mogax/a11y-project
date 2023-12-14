@@ -16,11 +16,7 @@ export class RegisterModel {
 @Component({
   selector: 'a11y-register-page',
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    TranslateModule,
-  ],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './register-page.component.html',
   styleUrls: ['./register-page.component.scss'],
 })
@@ -97,5 +93,9 @@ export class RegisterPageComponent {
 
   reset() {
     this.data = new RegisterModel('', '', '');
+  }
+
+  checkPassword() {
+    return this.data.password === this.data.confirmPassword;
   }
 }
