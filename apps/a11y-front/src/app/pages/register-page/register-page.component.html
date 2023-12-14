@@ -9,18 +9,27 @@
             <label for="email">{{'authPage.emailLabel' | translate}}</label>
           </div>
           <input type="email" [(ngModel)]="data.email" name="email" id="email" required/>
+          <div *ngIf="data.emailError !== ''">
+            <p class="error-message">{{ data.emailError }}</p>
+          </div>
         </div>
         <div class="input">
           <div class="label">
             <label for="password">{{'authPage.passwordLabel' | translate}}</label>
           </div>
           <input type="password" [(ngModel)]="data.password" name="password" id="password" required/>
+          <div *ngIf="data.passwordError !== ''">
+            <p class="error-message">{{ data.passwordError }}</p>
+          </div>
         </div>
         <div class="input">
           <div class="label">
             <label for="confirmPassword">{{'authPage.confirmPasswordLabel' | translate}}</label>
           </div>
           <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required/>
+          <div *ngIf="data.confirmPasswordError !== ''">
+            <p class="error-message">{{ data.confirmPasswordError }}</p>
+          </div>
         </div>
         <div class="label">
           <input type="checkbox" id="newsletter" name="newsletter"/>

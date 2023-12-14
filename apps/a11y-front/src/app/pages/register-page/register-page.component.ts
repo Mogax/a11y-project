@@ -9,7 +9,10 @@ export class RegisterModel {
   constructor(
     public password: string,
     public confirmPassword: string,
-    public email: string
+    public email: string,
+    public emailError: string = '',
+    public passwordError: string = '',
+    public confirmPasswordError: string = ''
   ) {}
 }
 
@@ -26,49 +29,57 @@ export class RegisterPageComponent {
 
   register() {
     if (this.data.password !== this.data.confirmPassword) {
-      alert('Passwords do not match!');
+      this.data.confirmPasswordError = 'Passwords do not match!';
       return;
     }
 
     if (this.data.password.length < 8) {
-      alert('Password must be at least 8 characters long!');
+      this.data.passwordError = 'Password must be at least 8 characters long!';
       return;
     }
 
     if (this.data.password.length > 12) {
-      alert('Password cannot be more than 12 characters long!');
+      this.data.passwordError =
+        'Password cannot be more than 12 characters long!';
       return;
     }
 
     if (this.data.password === this.data.password.toLowerCase()) {
-      alert('Password must contain at least one uppercase letter!');
+      this.data.passwordError =
+        'Password must contain at least one uppercase letter!';
       return;
     }
 
     if (this.data.password === this.data.password.toUpperCase()) {
-      alert('Password must contain at least one lowercase letter!');
+      this.data.passwordError =
+        'Password must contain at least one lowercase letter!';
       return;
     }
 
     if (!this.data.password.match(/[0-9]/)) {
-      alert('Password must contain at least one number!');
+      this.data.passwordError = 'Password must contain at least one number!';
       return;
     }
 
     if (!this.data.password.match(/[^a-zA-Z0-9]/)) {
-      alert('Password must contain at least one special character!');
+      this.data.passwordError =
+        'Password must contain at least one special character!';
       return;
     }
 
     if (!this.data.email.includes('@')) {
-      alert('Email must contain an @!');
+      this.data.emailError = 'Email must contain an @!';
       return;
     }
 
     if (!this.data.password.match(/[!?.]/)) {
-      alert('These are not specific enough character');
+      this.data.passwordError = 'These are not specific enough character';
       return;
     }
+
+    this.data.emailError = '';
+    this.data.passwordError = '';
+    this.data.confirmPasswordError = '';
 
     from(
       createUserWithEmailAndPassword(

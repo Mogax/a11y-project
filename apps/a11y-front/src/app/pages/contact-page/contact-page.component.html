@@ -15,8 +15,11 @@
         </div>
         <div class="input">
           <label for="phoneNumber">{{'contactPage.phoneLabel' | translate}}</label>
-          <input [(ngModel)]="data.phoneNumber" name="phoneNumber" id="phoneNumber" required pattern="^[0-9]{10}$"
+          <input [(ngModel)]="data.phoneNumber" name="phoneNumber" id="phoneNumber" required pattern="^\+[0-9]{11}$"
                  #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}"/>
+          <div *ngIf="data.phoneNumberError !== ''">
+            <p class="error-message">{{ data.phoneNumberError }}</p>
+          </div>
         </div>
         <div class="input">
           <label for="email">{{'contactPage.emailLabel' | translate}}</label>
