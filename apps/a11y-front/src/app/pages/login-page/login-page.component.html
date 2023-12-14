@@ -4,9 +4,9 @@
   <form #registerForm="ngForm">
     <div class="form-row">
       <div class="label">
-        <label for="text">{{'authPage.emailLabel' | translate}}</label>
+        <label for="email">{{'authPage.emailLabel' | translate}}</label>
       </div>
-      <input type="text" [(ngModel)]="data.email" name="text" id="text" required/>
+      <input type="email" [(ngModel)]="data.email" name="email" id="email" required/>
     </div>
     <div class="form-row">
       <div class="label">
