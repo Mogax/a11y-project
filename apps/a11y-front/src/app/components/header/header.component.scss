@@ -84,6 +84,7 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
+    z-index: 6;
 
     &__logo {
       display: flex;
@@ -91,10 +92,13 @@
       align-items: center;
       flex-direction: row;
       gap: 2em;
+      z-index: 6;
+
     }
 
     &__menu-burger {
       display: block;
+      z-index: 6;
     }
 
     &__menu {
@@ -102,12 +106,20 @@
     }
 
     &__menu-phone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
       display: flex;
+      justify-content: center;
       flex-direction: column;
       gap: 1em;
       font-size: 0.8em;
       align-items: center;
       font-weight: 500;
+      background-color: white;
+      z-index: 5;
 
       div {
         display: flex;
@@ -117,6 +129,7 @@
       }
 
       a {
+        font-size: 1.5em;
         cursor: pointer;
         text-decoration: none;
         color: #0E0227;

@@ -46,9 +46,11 @@
     <a class="header__menu-link" href="/news">
       {{ 'header.news' | translate }}
     </a>
+    <div *ngIf="authService.isLoggedIn()">
     <a class="header__menu-link" href="/lists">
       {{ 'header.lists' | translate }}
     </a>
+    </div>
     <div *ngIf="!authService.isLoggedIn()">
       <a class="header__menu-link" href="/login">
         {{ 'header.login' | translate }}
