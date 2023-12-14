@@ -100,6 +100,11 @@ export const fr = {
   },
   newsPage: {
     title: 'Actualités',
+    newsletterTitle: 'Inscription à la newsletter',
+    newsletterText:
+      'Grâce à la newsletter, vous ne manquerez pas nos dernières nouvelles ! Donnez-nous votre adresse email et vous aurez la certitude de recevoir le meilleur contenu dans votre boîte aux lettres.',
+    newsletterButton: 'Souscrire',
+    email: 'Email : ',
   },
   cookies: {
     title: 'Cookies',
@@ -107,7 +112,7 @@ export const fr = {
     textSecondary:
       "Il s'agit notamment de cookies fonctionnels, de publicités ciblées et de cookies de réseaux sociaux.",
     accept: 'Accepter',
-    refused: 'Refuser'
+    refused: 'Refuser',
   },
   switchLanguage: 'Passer en anglais',
   cookiesRefused: 'Supprimez les cookies',

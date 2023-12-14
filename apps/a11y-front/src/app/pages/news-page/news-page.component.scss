@@ -28,4 +28,20 @@
   &__content {
     padding: 10px;
   }
+
+  .newsletter {
+    border: #6528F7 solid;
+    padding: 1rem;
+
+    .button {
+      color: #F8F8F8;
+      background-color: #6528F7;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding: 0.75em 1em;
+      cursor: pointer;
+      margin-left: 1em;
+    }
+  }
 }

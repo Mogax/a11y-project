@@ -103,6 +103,11 @@ export const en = {
   },
   newsPage: {
     title: 'News',
+    newsletterTitle: 'Newsletter subscription',
+    newsletterText:
+      'With the newsletter wou will not miss our latest news! Give us your email address and you can be confident to get only the best content in your mailbox',
+    newsletterButton: 'Subscribe',
+    email: 'Email : ',
   },
   cookies: {
     title: 'Cookies',
@@ -110,7 +115,7 @@ export const en = {
     textSecondary:
       'This includes functional, targeted ads and social networks cookies.',
     accept: 'Accepted',
-    refused: 'Refused'
+    refused: 'Refused',
   },
   switchLanguage: 'Switch to french',
   cookiesRefused: 'Remove cookies',
