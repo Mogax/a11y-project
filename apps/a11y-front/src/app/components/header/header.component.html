@@ -1,36 +1,36 @@
 <div class="header">
   <div class="header__logo">
-    <a class="header__menu-burger" (click)="openMenu()">
+    <div class="header__menu-burger" (click)="openMenu()">
       <img src="../../../assets/icons/burger-icon.svg" alt="menu burger">
-    </a>
-    <a class="header__menu-link" (click)="goToHome()">
+    </div>
+    <a class="header__menu" href="/">
       <img src="../../../assets/icons/logo.svg" alt="logo a11y">
     </a>
   </div>
   <div class="header__menu">
-    <a class="header__menu-link" tabindex="1" (keydown.enter)="goToAbout()" (click)="goToAbout()">
+    <a class="header__menu" (keydown.enter)="goToAbout()" href="/about">
       {{ 'header.about' | translate }}
     </a>
-    <a class="header__menu-link" tabindex="2" (keydown.enter)="goToContact()" (click)="goToContact()">
+    <a class="header__menu" (keydown.enter)="goToContact()" href="/contact">
       {{ 'header.contact' | translate }}    </a>
-    <a class="header__menu-link" tabindex="3" (keydown.enter)="goToNews()" (click)="goToNews()">
+    <a class="header__menu" (keydown.enter)="goToNews()" href="/news">
       {{ 'header.news' | translate }}
     </a>
     <div *ngIf="authService.isLoggedIn()">
-      <a class="header__menu-link" tabindex="4" (keydown.enter)="goToList()" (click)="goToList()">
+      <a class="header__menu" (keydown.enter)="goToList()" href="/lists">
         {{ 'header.lists' | translate }}
       </a>
     </div>
     <div *ngIf="!authService.isLoggedIn()">
-      <a class="header__menu-link" tabindex="5" (keydown.enter)="goToLogin()" (click)="goToLogin()">
+      <a class="header__menu" (keydown.enter)="goToLogin()" href="/login">
         {{ 'header.login' | translate }}
       </a>
-      <a class="signup" tabindex="6" (keydown.enter)="goToRegister()" (click)="goToRegister()">
+      <a class="signup" (keydown.enter)="goToRegister()" href="/register">
         {{ 'header.register' | translate }}
       </a>
     </div>
     <div *ngIf="authService.isLoggedIn()">
-      <a class="signup" tabindex="7" (keydown.enter)="logout()" (click)="logout()">
+      <a class="signup"   (keydown.enter)="logout()" (click)="logout()">
         {{ 'header.logout' | translate }}
       </a>
     </div>
@@ -38,22 +38,22 @@
   </div>
 
   <div class="header__menu-phone">
-    <a class="header__menu-link" (click)="goToAbout()">
+    <a class="header__menu-link" href="/about">
       {{ 'header.about' | translate }}
     </a>
-    <a class="header__menu-link" (click)="goToContact()">
+    <a class="header__menu-link" href="/contact">
       {{ 'header.contact' | translate }}    </a>
-    <a class="header__menu-link" (click)="goToNews()">
+    <a class="header__menu-link" href="/news">
       {{ 'header.news' | translate }}
     </a>
-    <a class="header__menu-link" (click)="goToList()">
+    <a class="header__menu-link" href="/lists">
       {{ 'header.lists' | translate }}
     </a>
     <div *ngIf="!authService.isLoggedIn()">
-      <a class="header__menu-link" (click)="goToLogin()">
+      <a class="header__menu-link" href="/login">
         {{ 'header.login' | translate }}
       </a>
-      <a class="signup" (click)="goToRegister()">
+      <a class="signup" href="/register">
         {{ 'header.register' | translate }}
       </a>
     </div>

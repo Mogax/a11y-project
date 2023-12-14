@@ -1,7 +1,5 @@
 import { Component, inject, LOCALE_ID } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
 import { NewsService } from './news.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DatePipe } from '@angular/common';
@@ -19,7 +17,7 @@ registerLocaleData(localeFr);
 })
 export class NewsPageComponent {
   constructor(private datePipe: DatePipe) {
-    this.setNotifications();
+    // this.setNotifications();
   }
 
   private readonly newsService = inject(NewsService);
