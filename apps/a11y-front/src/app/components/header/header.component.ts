@@ -20,6 +20,7 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
 export class HeaderComponent {
   private router = inject(Router);
   authService = inject(AuthService);
+  isMenuBurgerOpen = false;
 
   goToHome() {
     this.router.navigateByUrl('/');
@@ -54,6 +55,6 @@ export class HeaderComponent {
   }
 
   openMenu() {
-    // this.authService.logout();
+    this.isMenuBurgerOpen = !this.isMenuBurgerOpen;
   }
 }
