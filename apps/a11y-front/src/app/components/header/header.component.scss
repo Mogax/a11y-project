@@ -33,12 +33,15 @@
 
     a {
       cursor: pointer;
+      text-decoration: none;
+      color: #0E0227;
 
       &:hover {
         font-weight: 600;
         text-decoration: underline 0.15em !important;
       }
     }
+
 
     .signup {
       background-color: #6528F7;
