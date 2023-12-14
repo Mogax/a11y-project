@@ -37,7 +37,7 @@
     <a11y-language-switcher/>
   </div>
 
-  <div class="header__menu-phone">
+  <div class="header__menu-phone" *ngIf="isMenuBurgerOpen">
     <a class="header__menu-link" href="/about">
       {{ 'header.about' | translate }}
     </a>
