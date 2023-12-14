@@ -1,57 +1,38 @@
-<h1>{{'contactPage.title' | translate}}</h1>
+<div class="container">
+  <div class="width-container">
+    <h1>{{'contactPage.title' | translate}}</h1>
 
-<div class="contact-text">
-  {{'contactPage.text' | translate}}
-</div>
+    <div class="contact-text">
+      {{'contactPage.text' | translate}}
+    </div>
 
-<div class="contact">
-
-  <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-    <table class="no-border">
-      <tr>
-        <td>
-          <div class="float-left">
-            <label for="name">{{'contactPage.nameLabel' | translate}}</label>
-            <input [(ngModel)]="data.name" name="name" required #name="ngModel" id="name"
-                                               [ngClass]="{'error': name.invalid}"/>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div>
-            <label for="phoneNumber">{{'contactPage.phoneLabel' | translate}}</label>
-            <input [(ngModel)]="data.phoneNumber" name="phoneNumber" id="phoneNumber" required pattern="^[0-9]{10}$"
-                                    #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}"/>
-          </div>
-        </td>
-        <td>
-          <div class="float-left">
-            <label for="email">{{'contactPage.emailLabel' | translate}}</label>
-            <input type="email" [(ngModel)]="data.email" name="email" id="email" required
-                                               #email="ngModel" [ngClass]="{'error': email.invalid}"/>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td colspan="2">
-          <div>
-            <label for="message">{{'contactPage.messageLabel' | translate}}</label>
-            <br/>
-            <textarea [(ngModel)]="data.message" name="message" id="message"></textarea>
-          </div>
-        </td>
-      </tr>
-      @if (contactForm['form'].valid) {
-        <tr>
-          <td colspan="2">
-            <button type="submit" tabindex="1">Submit</button>
-          </td>
-        </tr>
-      }
-    </table>
-
-
-  </form>
+    <div class="contact">
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="form">
+        <div class="input">
+          <label for="name">{{'contactPage.nameLabel' | translate}}</label>
+          <input [(ngModel)]="data.name" name="name" required #name="ngModel" id="name"
+                 [ngClass]="{'error': name.invalid}"/>
+        </div>
+        <div class="input">
+          <label for="phoneNumber">{{'contactPage.phoneLabel' | translate}}</label>
+          <input [(ngModel)]="data.phoneNumber" name="phoneNumber" id="phoneNumber" required pattern="^[0-9]{10}$"
+                 #phoneNumber="ngModel" [ngClass]="{'error': phoneNumber.invalid}"/>
+        </div>
+        <div class="input">
+          <label for="email">{{'contactPage.emailLabel' | translate}}</label>
+          <input type="email" [(ngModel)]="data.email" name="email" id="email" required
+                 #email="ngModel" [ngClass]="{'error': email.invalid}"/>
+        </div>
+        <div class="input">
+          <label for="message">{{'contactPage.messageLabel' | translate}}</label>
+          <textarea [(ngModel)]="data.message" name="message" id="message"></textarea>
+        </div>
+        @if (contactForm['form'].valid) {
+          <button type="submit">Submit</button>
+        } @else {
+          <button type="submit" disabled>Submit</button>
+        }
+      </form>
+    </div>
+  </div>
 </div>

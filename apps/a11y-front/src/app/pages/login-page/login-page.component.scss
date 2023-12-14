@@ -1,25 +1,49 @@
-.login-form {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 500px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F8F8F8;
 
-  border: 1px solid coral;
-  border-radius: 5px;
-  background: aliceblue;
+  .width-container{
+    background-color: #6528F7;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  padding: 40px 20px;
-  margin-bottom: 50px;
-}
+    .contact-text{
+      text-align: center;
+    }
 
-.label {
-  float:left;
-  min-width: 150px;
-}
+    .contact {
+      display: flex;
+      justify-content: center;
+      padding: 1em;
+      width: fit-content;
+    }
 
-.form-row {
-  height: 30px;
+    .form {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  &:last-child {
-    text-align: center;
+      .input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.25em;
+        width: 100%;
+
+        & label {
+          margin-right: 1em;
+        }
+      }
+
+      .button-container{
+        margin-top: 1em;
+      }
+    }
   }
 }

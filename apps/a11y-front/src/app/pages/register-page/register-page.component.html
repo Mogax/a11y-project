@@ -1,33 +1,37 @@
-<h1>{{'authPage.register' | translate}}</h1>
+<div class="container">
+  <div class="width-container">
+    <h1>{{'authPage.register' | translate}}</h1>
 
-<div class="register-form">
-  <form #registerForm="ngForm">
-    <div class="form-row">
-      <div class="label">
-        <label for="email">{{'authPage.emailLabel' | translate}}</label>
-      </div>
-      <input type="email" [(ngModel)]="data.email" name="email" id="email" required/>
+    <div class="contact">
+      <form #registerForm="ngForm" class="form">
+        <div class="input">
+          <div class="label">
+            <label for="email">{{'authPage.emailLabel' | translate}}</label>
+          </div>
+          <input type="email" [(ngModel)]="data.email" name="email" id="email" required/>
+        </div>
+        <div class="input">
+          <div class="label">
+            <label for="password">{{'authPage.passwordLabel' | translate}}</label>
+          </div>
+          <input type="password" [(ngModel)]="data.password" name="password" id="password" required/>
+        </div>
+        <div class="input">
+          <div class="label">
+            <label for="confirmPassword">{{'authPage.confirmPasswordLabel' | translate}}</label>
+          </div>
+          <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required/>
+        </div>
+        <div class="label">
+          <input type="checkbox" id="newsletter" name="newsletter"/>
+          <label for="newsletter">Newsletter</label>
+        </div>
+        <div class="button-container">
+          <button (click)="reset()">{{'authPage.resetButton' | translate}}</button>
+          <button (click)="register()" [disabled]="registerForm['form'].invalid || !checkPassword()">{{'authPage.registerButton' | translate}}</button>
+        </div>
+        <p class="contact-text">{{'authPage.newsletter' | translate}}</p>
+      </form>
     </div>
-    <div class="form-row">
-      <div class="label">
-        <label for="password">{{'authPage.passwordLabel' | translate}}</label>
-      </div>
-      <input type="password" [(ngModel)]="data.password" name="password" id="password" required/>
-    </div>
-    <div class="form-row">
-      <div class="label">
-        <label for="confirmPassword">{{'authPage.confirmPasswordLabel' | translate}}</label>
-      </div>
-      <input type="password" [(ngModel)]="data.confirmPassword" name="confirmPassword" id="confirmPassword" required/>
-    </div>
-    <div class="label">
-      <input type="checkbox" id="newsletter" name="newsletter"/>
-      <label for="newsletter">Newsletter</label>
-    </div>
-    <div class="form-row">
-      <button (click)="reset()">{{'authPage.resetButton' | translate}}</button>
-      <button (click)="register()" [disabled]="registerForm['form'].invalid || !checkPassword()">{{'authPage.registerButton' | translate}}</button>
-    </div>
-    <p>{{'authPage.newsletter' | translate}}</p>
-  </form>
+  </div>
 </div>
