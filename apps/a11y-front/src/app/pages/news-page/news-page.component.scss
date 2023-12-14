@@ -2,17 +2,22 @@
   padding: 30px 5%;
 
   &__item {
-    border: 1px solid orangered;
-    border-radius: 10px;
     margin-bottom: 20px;
+    background: #6528F7;
+    color: white;
   }
 
   &__header {
-    background: orangered;
+    background: #6528F7;
     padding: 10px;
 
     h2 {
+      font-size: 2em;
       margin: 0;
+    }
+
+    a {
+      color: white;
     }
   }
 
